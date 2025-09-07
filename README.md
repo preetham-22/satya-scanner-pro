@@ -1,73 +1,54 @@
-# Welcome to your Lovable project
+SatyaCheck: AI-Powered Misinformation Detector
+SatyaCheck is a web application designed to combat the spread of misinformation in India by providing users with an AI-powered tool to analyze the credibility of text and news articles. This project was built for a Generative AI hackathon.
 
-## Project info
+The Problem
+The rapid spread of fake news and misinformation poses a severe threat, leading to social unrest, public health crises, and financial scams. Simple fact-checking is not enough; users need to be educated on why a piece of content might be misleading to build long-term digital literacy.
 
-**URL**: https://lovable.dev/projects/b7659df4-4567-4c45-9d67-6a833ecd93b2
+Our Solution
+SatyaCheck is a user-friendly tool that goes beyond simple fact-checking. It leverages the advanced reasoning capabilities of Google's Gemini model to provide a multi-faceted analysis, including:
 
-## How can I edit this code?
+Trust Score: An at-a-glance credibility rating.
 
-There are several ways of editing your application.
+Red Flag Detection: Identifies specific manipulation tactics like emotional language, lack of sources, and logical fallacies.
 
-**Use Lovable**
+Educational Breakdown: The core feature. It explains in simple terms why the content is suspicious, teaching users to develop critical thinking skills.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b7659df4-4567-4c45-9d67-6a833ecd93b2) and start prompting.
+Bias Detection: Identifies potential political or commercial bias.
 
-Changes made via Lovable will be committed automatically to this repo.
+Tech Stack
+Frontend: Streamlit
 
-**Use your preferred IDE**
+Backend: FastAPI on Google Cloud Run
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+AI Model: Google Gemini on Vertex AI
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Deployment: Docker, Google Cloud Build, Artifact Registry
 
-Follow these steps:
+How to Run the Frontend
+The backend is a live API already deployed on Google Cloud Run. To run the user-facing web application on your local machine, follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Clone the repository:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+git clone [https://github.com/preetham-22/SatyaCheck-Hackathon.git](https://github.com/preetham-22/SatyaCheck-Hackathon.git)
+cd SatyaCheck-Hackathon
 
-# Step 3: Install the necessary dependencies.
-npm i
+Create and activate a virtual environment:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+# Create the environment
+python -m venv venv
 
-**Edit a file directly in GitHub**
+# Activate on Windows
+.\venv\Scripts\activate
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# Activate on macOS/Linux
+source venv/bin/activate
 
-**Use GitHub Codespaces**
+Install the required packages:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+pip install -r requirements.txt
 
-## What technologies are used for this project?
+Run the Streamlit application:
 
-This project is built with:
+streamlit run app.py
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b7659df4-4567-4c45-9d67-6a833ecd93b2) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+A new tab should open in your browser with the application running.
